@@ -1,7 +1,19 @@
 <h1>Posts</h1>
+<style>
+body{background-color: gray;}
+div{
+  background-color: yellow;
+width: 250px;
+height 250px;}
+</style>
+<%= link_to "Create", new_post_path %>
 
 <% @posts.each do |post| %>
-<p><%= post.title %></p>
-<% link_to "Show Post", post_path(post) %>
+  <div>
+  <p><%= post.title %></p>
+  <%= link_to 'Show', post_path(post) %>
+  <%= link_to 'Edit', edit_post_path(post) %>
+  <%= link_to 'Destroy', post, method: :delete %>
   <% end %>
-
+</div>
+1
