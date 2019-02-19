@@ -3,8 +3,8 @@
 body{background-color: gray;}
 div{
   background-color: yellow;
-width: 250px;
-height 250px;}
+width: 250px!important;
+height: 250px!important;}
 </style>
 <%= link_to "Create", new_post_path %>
 
@@ -14,6 +14,5 @@ height 250px;}
   <%= link_to 'Show', post_path(post) %>
   <%= link_to 'Edit', edit_post_path(post) %>
   <%= link_to 'Destroy', post, method: :delete %>
+  </div>
   <% end %>
-</div>
-1
